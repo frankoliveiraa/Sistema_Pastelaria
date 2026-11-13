@@ -1,0 +1,20 @@
+package executarcod;
+
+import telas.TelaConsultaPastel;
+
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+public class App {
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            TelaConsultaPastel tela = new TelaConsultaPastel();
+            tela.setVisible(true);
+        });
+    }
+}
